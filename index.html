@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dara Master Administration Studio</title>
+    <!-- Core style linkage -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Client-side Python isolation engine asset -->
+    <script src="https://jsdelivr.net"></script>
+</head>
+<body>
+
+    <div class="brand-banner">
+        <div class="brand-meta">
+            <div class="dara-logo-vector"></div>
+            <div>
+                <div class="org-name">Dara Organization</div>
+                <div class="creator-tag">Compiler Terminal Dashboard • Creator: Me</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Tabs System -->
+    <div class="tab-nav">
+        <button id="nav_dash" class="tab-btn active" onclick="switchTab('dash')">📊 App Dashboard</button>
+        <button id="nav_git" class="tab-btn" onclick="switchTab('git')">🐙 GitHub Repository</button>
+        <button id="nav_java" class="tab-btn" onclick="switchTab('java')">☕ Java Terminal Compiler</button>
+        <button id="nav_py" class="tab-btn" onclick="switchTab('py')">🐍 Python Terminal Compiler</button>
+    </div>
+
+    <!-- TAB 1: CORE DASHBOARD -->
+    <div id="tab_content_dash" class="tab-content active">
+        <div class="panel-card">
+            <div class="card-title">📊 Welcome back, Creator</div>
+            <p>Select a terminal compilation utility tab above to execute codebase logic matrices inside this session.</p>
+        </div>
+    </div>
+
+    <!-- TAB 2: GITHUB MANAGER -->
+    <div id="tab_content_git" class="tab-content">
+        <div class="panel-card">
+            <div class="card-title">🐙 Repo Management Window</div>
+            <p>GitHub Repository settings interface framework placeholder.</p>
+        </div>
+    </div>
+
+    <!-- TAB 3: JAVA TERMINAL COMPILER -->
+    <div id="tab_content_java" class="tab-content">
+        <div class="panel-grid">
+            <div class="panel-card">
+                <div class="card-title">☕ Java Code Editor Studio</div>
+                <label>Main.java Source Workspace (Keep Class Name as Main)</label>
+                <textarea id="javaCodeArea">public class Main {
+    public static void main(String[] args) {
+        System.out.println("Java compilation loop initialized successfully.");
+        int result = 5 * 5;
+        System.out.println("Debug matrix variable validation: " + result);
+    }
+}</textarea>
+                <div class="btn-group">
+                    <button onclick="executeJavaCompilationLoop()" class="btn btn-green">⚡ Compile & Run Java</button>
+                    <button onclick="clearTerminalDisplay('javaTerminal')" class="btn btn-red">🧹 Clear Output</button>
+                </div>
+                
+                <label>Java Runnable Execute Terminal Screen</label>
+                <div id="javaTerminal" class="terminal-box">Terminal standing by...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 4: PYTHON TERMINAL COMPILER -->
+    <div id="tab_content_py" class="tab-content">
+        <div class="panel-grid">
+            <div class="panel-card">
+                <div class="card-title">🐍 Python Live Interpreter Console</div>
+                <label>Script.py Source Workspace</label>
+                <textarea id="pyCodeArea">def debug_test():
+    print("Python terminal console active via Pyodide core environment layer.")
+    matrix = [i for i in range(1, 6)]
+    print(f"Debug evaluation list sequence validation: {matrix}")
+
+debug_test()</textarea>
+                <div class="btn-group">
+                    <button onclick="executePythonInterpreterLoop()" class="btn btn-blue">⚡ Execute Python Code</button>
+                    <button onclick="clearTerminalDisplay('pyTerminal')" class="btn btn-red">🧹 Clear Output</button>
+                </div>
+                
+                <label>Python Runnable Execute Terminal Screen</label>
+                <div id="pyTerminal" class="terminal-box">Initializing cloud environments layer engine...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Linkage to app script processing loop layers -->
+    <script src="app.js"></script>
+</body>
+</html>
+
